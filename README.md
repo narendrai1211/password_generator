@@ -14,4 +14,10 @@ Run Backend flask server using -
 ```sh
 python3 flask_app_backend.py
 ```
-go to http://127.0.0.1:5000/ after running the above command
+go to the public URL generated via ngrok after running the above command
+
+```sh
+ Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Running on http://94694ec27a7b.ngrok.io # this is ngrok url
+ * Traffic stats available on http://127.0.0.1:4040
+```
