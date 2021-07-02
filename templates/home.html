@@ -16,7 +16,7 @@
 {% block body %}
 {% endblock %}
 
-<form action="http://127.0.0.1:5000/pwd_gen" method="POST">
+<form action="{{ url_for('pwd_gen') }}" method="POST">
 <h3> Password Generator </h3> <br>
 <span> Enter the password length : </span>
 <input type="number" align="center" name="pwd_length">
