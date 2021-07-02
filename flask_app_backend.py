@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, flash
 from password_generator import pass_gen
+from flask_ngrok import run_with_ngrok
 
 app = Flask(__name__)
 app.secret_key = str(pass_gen(100))  # generated secret key by using the same function
+run_with_ngrok(app)
 
 
 @app.route('/')
@@ -15,7 +17,7 @@ def home():
 
 
 @app.route('/pwd_gen', methods=['POST'])
-def get_pwd():
+def pwd_gen():
     if request.method == 'POST':
         formdata = request.form.to_dict()
         if int(formdata['pwd_length']) > 7:
